@@ -14,9 +14,12 @@ import Reservation from "./components/Reservation/Reservation";
 import Review from "./components/Review/Review";
 import Video from "./components/Video/Video";
 import VideoPopup from "./components/Video/VideoPopup";
+import News from "./components/News/News";
+import Signup from "./components/Signup/Signup";
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
-// Video popup modal
+// Video popup modal for video section
 const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="App" css={styles}>
@@ -30,6 +33,9 @@ const [isOpen, setIsOpen] = useState(false);
       <Review />
       <Video isOpen={isOpen} setIsOpen={setIsOpen}/>
       { isOpen ? <VideoPopup isOpen={isOpen} setIsOpen={setIsOpen}/> : null }
+      <News />
+      <Signup />
+      <Footer />
     </div>
   );
 };
