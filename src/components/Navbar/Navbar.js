@@ -133,6 +133,16 @@ const styles = css`
       }
     }
   }
+  @media (max-width: 1212px) {
+    .container {
+      .navbar-items {
+        display: none;
+      }
+      .navbar-social {
+        justify-content: flex-end;
+      }
+    }
+  }
 `;
 
 export default Navbar;

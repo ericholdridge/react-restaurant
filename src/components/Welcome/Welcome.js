@@ -72,6 +72,26 @@ const styles = css`
       }
     }
   }
+  @media (max-width: 767px) {
+    .container {
+      flex-direction: column;
+      .card1 {
+        max-width: 700px;
+        width: 100%;
+        padding: 0;
+        .sectionHeading {
+          padding: 40px 40px 0 40px;
+        }
+        p {
+          font-size: .9rem;
+          line-height: 2;
+        }
+      }
+      .image {
+        margin: 40px 0 0 0;
+      }
+    }
+  }
 `;
 
 export default Welcome;

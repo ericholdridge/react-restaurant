@@ -44,6 +44,19 @@ const styles = css`
       margin: 40px 0 0 0;
     }
   }
+  @media (max-width: 500px) {
+    .hero-content {
+      h3 {
+        font-size: 2.8rem;
+      }
+      h1 {
+        font-size: 4rem;
+        line-height: 1.1;
+        padding: 10px 0 0 0;
+      }
+    }
+  }
 `;
+
 
 export default Hero;
