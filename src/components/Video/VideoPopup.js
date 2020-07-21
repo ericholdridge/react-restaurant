@@ -1,18 +1,14 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
 
-const VideoPopup = ({ isOpen, setIsOpen }) => {
+const VideoPopup = ({ setIsOpen }) => {
   return (
     <div className="videoPopup" css={styles}>
       <div className="close" onClick={() => setIsOpen(false)}>
         X
       </div>
       <div className="overlay"></div>
-      <iframe
-        width="420"
-        height="315"
-        src="https://www.youtube.com/embed/tgbNymZ7vqY"
-      ></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/5k1hSu2gdKE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   );
 };
@@ -59,6 +55,12 @@ const styles = css`
     bottom: 0;
     left: 0;
     margin: auto;
+  }
+  @media (max-width: 768px) {
+    iframe {
+      width: 400px;
+      height: 400px;
+    }
   }
 `;
 

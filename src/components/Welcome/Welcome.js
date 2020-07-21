@@ -24,10 +24,10 @@ const Welcome = () => {
             fringilla, nunc sed imperdiet lacinia, nisl ante egestas mi, ac
             facilisis ligula sem id neque.
           </p>
-          <InfoBtn text="OUR STORY"/>
+          <InfoBtn text="OUR STORY" />
         </div>
         <div className="image">
-          <img src={OurStoryImg} alt=""/>
+          <img src={OurStoryImg} alt="" />
         </div>
       </Container>
     </section>
@@ -89,6 +89,26 @@ const styles = css`
       }
       .image {
         margin: 40px 0 0 0;
+      }
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1008px) {
+    .container {
+      .card1 {
+        padding: 0 20px 10px 10px;
+        text-align: left;
+        .sectionHeading {
+          text-align: left;
+        }
+        .infoBtn {
+          margin: 0;
+        }
+        p {
+          text-align: left;
+        }
+      }
+      .image {
+        max-width: 300px;
       }
     }
   }

@@ -39,6 +39,25 @@ const styles = css`
     justify-content: space-between;
     padding: 100px 0;
   }
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      .introCard {
+        width: 100%;
+        max-width: none;
+        padding: 0 0 30px 0;
+      }
+    }
+  }
+  @media (min-width: 769px) and (max-width: 1282px) {
+    .container {
+      flex-wrap: wrap;
+      .introCard {
+        max-width: 48%;
+        padding: 0 0 30px 0;
+      }
+    }
+  }
 `;
 
 export default Intro;

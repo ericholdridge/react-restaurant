@@ -37,7 +37,8 @@ const EventItem = ({ img, eventTitle, eventInfo }) => {
 
     timerComponents.push(
       <div>
-        <h4>{timeLeft[interval]}</h4><span>{interval}</span>
+        <h4>{timeLeft[interval]}</h4>
+        <span>{interval}</span>
       </div>
     );
   });
@@ -52,7 +53,7 @@ const EventItem = ({ img, eventTitle, eventInfo }) => {
         <div className="eventTimer">
           {timerComponents.length ? timerComponents : null}
         </div>
-      <InfoBtn text="VIEW DETAILS"/>
+        <InfoBtn text="VIEW DETAILS" />
       </div>
     </div>
   );
@@ -109,9 +110,64 @@ const styles = css`
           text-transform: uppercase;
           font-weight: 600;
           color: #666666;
-          font-size: .8rem;
+          font-size: 0.8rem;
         }
       }
+    }
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    .eventImage {
+      border-radius: 10px 10px 0 0;
+      max-width: none;
+      width: 100%;
+      img {
+        border-radius: 10px 10px 0 0;
+        width: 100%;
+      }
+    }
+    .eventInfo {
+      padding: 50px 10px;
+      border-radius: 0 0 10px 10px;
+      max-width: none;
+      width: 100%;
+      p {
+        font-size: 0.9rem;
+        padding: 10px;
+      }
+      .eventTimer {
+        div {
+          padding: 0 10px;
+          h4 {
+            font-size: 1.4rem;
+            padding: 0 10px;
+          }
+        }
+      }
+    }
+  }
+  @media(min-width: 769px) and (max-width: 1000px){
+    flex-direction: column;
+    align-items: center;
+    .eventImage {
+      border-radius: 10px 10px 0 0;
+      img {
+        border-radius: 10px 10px 0 0;
+      }
+    }
+    .eventInfo {
+      padding: 50px 0;
+      border-radius: 0 0 10px 10px;
+    }
+  }
+  @media (min-width: 1001px) and (max-width: 1281px) {
+    .eventImage {
+      img {
+        height: 100%;
+      }
+    }
+    .eventInfo {
+      padding: 60px 0;
     }
   }
 `;

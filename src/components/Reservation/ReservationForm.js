@@ -10,20 +10,20 @@ const ReservationForm = () => {
         <input type="date" />
       </div>
       <div>
-        <label>Name</label>
-        <input type="text" placeholder="Name" />
-      </div>
-      <div>
         <label>Time</label>
         <input type="time" />
       </div>
       <div>
-        <label>Phone</label>
-        <input type="text" />
+        <label>People</label>
+        <input type="time" />
       </div>
       <div>
-        <label>People</label>
-        <input type="text" />
+        <label>Name</label>
+        <input type="text" placeholder="Name"/>
+      </div>
+      <div>
+        <label>Phone</label>
+        <input type="text" placeholder="Phone" />
       </div>
       <div>
         <label>Email</label>
@@ -51,6 +51,9 @@ const styles = css`
       outline: none;
       border: 2px solid #d9d9d9;
       padding: 0 0 0 14px;
+      &:focus {
+        border: 2px solid #ec1d25;
+      }
     }
   }
   .btn {
@@ -59,6 +62,7 @@ const styles = css`
     text-align: center;
     margin: 20px auto 0 auto;
     transition: background 400ms ease-in-out;
+    outline: none;
     &:hover {
       background: #ec1d25;
     }

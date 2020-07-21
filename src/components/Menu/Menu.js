@@ -150,6 +150,84 @@ const styles = css`
       }
     }
   }
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      .left {
+        flex-direction: column;
+        max-width: none;
+        width: 100%;
+        .lunch, .dinner, .happyHour {
+          max-width: none;
+          width: 100%;
+          margin: 0 0 30px 0;
+          .image {
+            width: 100%;
+            max-width: none;
+          }
+        }
+      }
+      .right {
+        flex-direction: column;
+        max-width: none;
+        width: 100%;
+        .drink, .starters, .dessert {
+          width: 100%;
+          height: auto;
+          margin: 0 0 30px 0;
+          .image {
+            width: 100%;
+            max-width: none;
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 769px) and (max-width: 1280px) {
+    .container {
+      .left {
+        width: 60%;
+        max-width: none;
+        .lunch, .dinner {
+          width: 47%;
+          max-width: none;
+          height: 320px;
+          .image {
+            height: 100%;
+            width: 100%;
+            img {
+              height: 100%;
+              width: 100%;
+            }
+          }
+        }
+        .happyHour {
+          height: 180px;
+          .image {
+            height: 100%;
+            width: 100%;
+            img {
+              height: 100%;
+              width: 100%;
+            }
+          }
+        }
+      }
+      .right {
+        width: 35%;
+        max-width: none;
+        .drink, .starters, .dessert {
+          max-height: 160px;
+          .image {
+            height: 100%;
+            img {
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
 `;
 
 export default Menu;

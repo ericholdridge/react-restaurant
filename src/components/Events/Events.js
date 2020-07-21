@@ -86,6 +86,33 @@ const styles = css`
       }
     }
   }
+  @media (max-width: 768px) {
+    .container {
+      .rec-carousel-wrapper {
+        .rec-carousel {
+          max-height: 800px;
+        }
+      }
+    }
+  }
+  @media (min-width: 769px) and (max-width: 1000px){
+    .container {
+      .rec-carousel-wrapper {
+        .rec-carousel {
+          max-height: 1000px;
+        }
+      }
+    }
+  }
+  @media (min-width: 1001px) and (max-width: 1281px){
+    .container {
+      .rec-carousel-wrapper {
+        .rec-carousel {
+          max-height: 450px;
+        }
+      }
+    }
+  }
 `;
 
 export default Events;

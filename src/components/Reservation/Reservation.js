@@ -20,7 +20,7 @@ const Reservation = () => {
           <ReservationForm />
         </div>
         <div className="image">
-          <img src={BookingImg} alt=""/>
+          <img src={BookingImg} alt="" />
         </div>
       </Container>
     </section>
@@ -58,6 +58,64 @@ const styles = css`
         &:hover {
           transform: scale(1.2);
         }
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      .cardLeft {
+        padding: 0 0 40px 0;
+        .reservationForm {
+          margin: 0 auto;
+          div {
+            margin: 20px auto;
+            max-width: none;
+            width: 100%;
+
+          }
+          button {
+            margin: 30px auto 0 auto;
+            display: inline;
+          }
+        }
+      }
+      .image {
+        margin: 0 auto;
+      }
+    }
+  }
+  @media (min-width: 769px) and (max-width: 992px){
+    .container {
+      flex-direction: column;
+      .cardLeft {
+        max-width: none;
+        .reservationForm {
+          div {
+            max-width: 48%;
+          }
+        }
+      }
+      .image {
+        padding: 30px 0 0 0;
+        margin: 0 auto;
+      }
+    }
+  }
+  @media (min-width: 993px) {
+    .container {
+      flex-direction: row;
+      .cardLeft {
+        max-width: none;
+        width: 45%;
+        .reservationForm {
+          div {
+            max-width: 45%;
+          }
+        }
+      }
+      .image {
+        margin: 30px auto 0 auto;
       }
     }
   }

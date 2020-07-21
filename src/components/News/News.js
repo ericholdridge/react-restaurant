@@ -45,6 +45,11 @@ const styles = css`
     display: flex;
     justify-content: space-between;
   }
+  @media (max-width: 768px){
+    .container {
+      flex-direction: column;
+    }
+  }
 `
 
 export default News;
