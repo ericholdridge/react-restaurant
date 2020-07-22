@@ -232,12 +232,12 @@ const styles = css`
           position: relative;
           margin: 0 0 10px 0;
           cursor: pointer;
-          transition: background 400ms ease-in-out;
           &:hover {
-            opacity: 0.2;
+          transition: opacity 300ms ease-in-out;
             .overlay {
               position: absolute;
-              background: pink
+              background: #ec1d25;
+              opacity: .7;
               top: 0;
               right: 0;
               bottom: 0;
@@ -248,13 +248,87 @@ const styles = css`
             }
           }
           .overlay {
-            display: none;
+            position: absolute;
+            background: #ec1d25;
+            opacity: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: 100%;
+            cursor: pointer;
+            display: block;
           }
           img {
             width: 100%;
             max-width: 80px;
             height: 80px;
             display: block;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 575px) {
+    .container {
+      flex-direction: column;
+      .cardOne {
+        .contactUs {
+          div {
+            font-size: .85rem;
+          }
+        }
+        .openingTimes {
+          padding: 10px 0 40px 0;
+          span {
+            font-size: .85rem;
+          }
+        }
+      }
+      .cardTwo {
+        .latestTwitter {
+          .feed {
+            .wrap {
+              div {
+                font-size: .85rem;
+              }
+              p {
+                font-size: .85rem;
+              }
+              .date {
+                padding: 15px 0 40px 0;
+                color: #555555;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 576px) and (max-width: 1130px) {
+    .container {
+      flex-wrap: wrap;
+      .cardOne {
+        width: 48%;
+        max-width: none;
+      }
+      .cardTwo {
+        width: 48%;
+        max-width: none;
+        .latestTwitter {
+          .feed {
+            .wrap {
+              div {
+                font-size: .85rem;
+              }
+              p {
+                font-size: .85rem;
+              }
+              .date {
+                padding: 15px 0 40px 0;
+                color: #555555;
+              }
+            }
           }
         }
       }

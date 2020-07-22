@@ -15,6 +15,7 @@ const styles = css`
   border-radius: 10px;
   border: none;
   font-size: .8rem;
+  outline: none;
 `
 
 export default Button;

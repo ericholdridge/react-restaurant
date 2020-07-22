@@ -48,8 +48,23 @@ const styles = css`
   @media (max-width: 768px){
     .container {
       flex-direction: column;
+      .introCard {
+        max-width: none;
+        padding: 0 0 30px 0;
+      }
     }
   }
+  @media (min-width: 769px) and (max-width: 1280px){
+    .container {
+      flex-wrap: wrap;
+      .introCard {
+        width: 48%;
+        max-width: none;
+        padding: 0 0 30px 0;
+      }
+    }
+  }
+  
 `
 
 export default News;
