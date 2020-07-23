@@ -21,9 +21,11 @@ import Footer from "./components/Footer/Footer";
 const App = () => {
 // Video popup modal for video section
 const [isOpen, setIsOpen] = useState(false);
+// Open or Close the nav
+const [openNav, setOpenNav] = useState(false);
   return (
     <div className="App" css={styles}>
-      <Hero />
+      <Hero openNav={openNav} setOpenNav={setOpenNav}/>
       <Welcome />
       <Discover />
       <Intro />

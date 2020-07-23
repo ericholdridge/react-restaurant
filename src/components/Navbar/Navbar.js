@@ -4,7 +4,7 @@ import Container from "../ReusableComponents/Container";
 // Logo
 import PatoLogo from "../../images/icons/logo.png";
 
-const Navbar = () => {
+const Navbar = ({openNav, setOpenNav}) => {
   return (
     <nav className="navbar" css={styles}>
       <Container>
@@ -42,7 +42,7 @@ const Navbar = () => {
             <i className="fab fa-facebook-f fa-sm"></i>
             <i className="fab fa-twitter fa-sm"></i>
           </div>
-          <div className="navbar-bars">
+          <div className="navbar-bars" onClick={() => setOpenNav(!openNav)}>
             <span></span>
             <span></span>
           </div>
